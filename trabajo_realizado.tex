@@ -155,7 +155,7 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 	\end{itemize}
 
 %-----------------------------------------------------------------------
-\subsection{Pantalla de datos del emisor de oficios entrantes}
+\subsection{Pantalla de datos del oficio de oficios entrantes}
 \subsubsection{Descripción}
 %Descripción amplia de las funciones de la pantalla incluyendo la descripción de todos los botones y las validaciones con las que cuenta
 	En esta pantalla el usuario puede ingresar el número de oficio, a quién va dirigido, la fecha de emisión y recepción del oficio y el asunto. La figura \ref{fig:Wizard2DatosDelOficio} muestra el diseño de esta pantalla.		
@@ -193,7 +193,7 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 \subsection{Pantalla de configuración de oficios entrantes}
 \subsubsection{Descripción}
 %Descripción amplia de las funciones de la pantalla incluyendo la descripción de todos los botones y las validaciones con las que cuenta
-	En esta pantalla . La figura \ref{fig:Wizard3Configuracion} muestra el diseño de esta pantalla.		
+	En esta pantalla el usuario puede configurar el oficio, es decir, si es un oficio de respuesta a un oficio saliente registrado anteriormente, si éste requiere respuesta, así como subir el documento en PDF del oficio físico. La figura \ref{fig:Wizard3Configuracion} muestra el diseño de esta pantalla.		
 		
 	\begin{figure}[htbp!]
 		\centering
@@ -206,14 +206,23 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 	Esta pantalla funciona de la siguiente manera:
 	
 	\begin{enumerate}
-		\item P
+		\item El usuario elije si es o no un oficio de respuesta a un oficio saliente registrado anteriormente.
+		\item Si tiene fecha límite de respuesta entonces el usuario registra dicha fecha.
+		\item Selecciona de su computadora el archivo en formato PDF para subirlo a la aplicación.
+		\item El usuario da clic en ``Finish''.
+		\item La aplicación valida los datos ingresados.
+		\item Si son válidos los datos ingresados, la aplicación registra el oficio entrante.
+		\item Si no son válidos los datos ingresados entonces la aplicación muestra la pantalla de la figura \ref{fig:Wizard1DatosDelRemitente}, con los errores de validación encontrados.
 	\end{enumerate}
 
 \subsubsection{Problemas que resuelve}
 Esta pantalla ayuda a mitigar las causas que dan origen a los siguientes problemas:
 
 	\begin{itemize}
-		\item P
+		\item Es complicado saber la ubicación física del oficio entrante.
+		\item No se tiene un registro de la fecha límite de respuesta al instante.
+		\item Es complicado determinar si el oficio originalmente tenía fecha límite de respuesta.
+		\item Se puede perder la certificación de la ISO 14000 al no contar con un sistema que les permita reducir consumo de papel en el manejo de oficios del CMPL.
 	\end{itemize}
 
 \subsubsection{Pantallas relacionadas}
@@ -227,7 +236,7 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 \subsection{Pantalla de registro de emisor de oficios entrantes}
 \subsubsection{Descripción}
 %Descripción amplia de las funciones de la pantalla incluyendo la descripción de todos los botones y las validaciones con las que cuenta
-	En esta pantalla . La figura \ref{fig:NuevoEmisor} muestra el diseño de esta pantalla.		
+	En esta pantalla el usuario puede registrar el nombre y cargo del remitente que envió el oficio en caso de que aún no exista su registro dentro de la aplicación. La figura \ref{fig:NuevoEmisor} muestra el diseño de esta pantalla.		
 		
 	\begin{figure}[htbp!]
 		\centering
@@ -240,14 +249,18 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 	Esta pantalla funciona de la siguiente manera:
 	
 	\begin{enumerate}
-		\item P
+		\item El usuario ingresa el o los nombres del emisor, sus apellidos y su cargo, ya sea seleccionándolo del menú de cargos, o bien, registrando un nuevo cargo.
+		\item El usuario da clic en ``Registrar''.
+		\item La aplicación valida que todos los campos requeridos estén llenos.
+		\item La aplicación registra la información ingresada.
+		\item La aplicación vuelve a la pantalla de la figura \ref{fig:Wizard1DatosDelRemitente}, con el registro del nuevo remitente.
 	\end{enumerate}
 
 \subsubsection{Problemas que resuelve}
 Esta pantalla ayuda a mitigar las causas que dan origen a los siguientes problemas:
 
 	\begin{itemize}
-		\item P
+		\item Es complicado consultar todos los oficios que un remitente ha enviado al CMPL.
 	\end{itemize}
 
 \subsubsection{Pantallas relacionadas}
@@ -260,7 +273,7 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 \subsection{Pantalla de registro de cargo del emisor de oficios entrantes}
 \subsubsection{Descripción}
 %Descripción amplia de las funciones de la pantalla incluyendo la descripción de todos los botones y las validaciones con las que cuenta
-	En esta pantalla . La figura \ref{fig:NuevoCargoEmisor} muestra el diseño de esta pantalla.		
+	En esta pantalla el usuario puede registrar el nombre del cargo del remitente que envió el oficio en caso de que aún no exista su registro dentro de la aplicación. La figura \ref{fig:NuevoCargoEmisor} muestra el diseño de esta pantalla.		
 		
 	\begin{figure}[htbp!]
 		\centering
@@ -273,14 +286,18 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 	Esta pantalla funciona de la siguiente manera:
 	
 	\begin{enumerate}
-		\item P
+		\item El usuario ingresa el nombre del cargo del emisor.
+		\item El usuario da clic en ``Registrar''.
+		\item La aplicación valida que todos los campos requeridos estén llenos.
+		\item La aplicación registra la información ingresada.
+		\item La aplicación vuelve a la pantalla de la figura \ref{fig:Wizard1DatosDelRemitente}, con el registro del nuevo cargo del remitente.
 	\end{enumerate}
 
 \subsubsection{Problemas que resuelve}
 Esta pantalla ayuda a mitigar las causas que dan origen a los siguientes problemas:
 
 	\begin{itemize}
-		\item P
+		\item Es complicado consultar todos los oficios que un remitente con cierto cargo ha enviado al CMPL.
 	\end{itemize}
 
 \subsubsection{Pantallas relacionadas}
@@ -293,7 +310,7 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 \subsection{Pantalla de registro de área que emite de oficios entrantes}
 \subsubsection{Descripción}
 %Descripción amplia de las funciones de la pantalla incluyendo la descripción de todos los botones y las validaciones con las que cuenta
-	En esta pantalla . La figura \ref{fig:NuevaAreaEmisor} muestra el diseño de esta pantalla.		
+	En esta pantalla el usuario puede registrar el nombre del área del remitente que envió el oficio en caso de que aún no exista su registro dentro de la aplicación. La figura \ref{fig:NuevaAreaEmisor} muestra el diseño de esta pantalla.		
 		
 	\begin{figure}[htbp!]
 		\centering
@@ -306,14 +323,18 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 	Esta pantalla funciona de la siguiente manera:
 	
 	\begin{enumerate}
-		\item P
+		\item El usuario ingresa el nombre del área del emisor.
+		\item El usuario da clic en ``Registrar''.
+		\item La aplicación valida que todos los campos requeridos estén llenos.
+		\item La aplicación registra la información ingresada.
+		\item La aplicación vuelve a la pantalla de la figura \ref{fig:Wizard1DatosDelRemitente}, con el registro de la nueva área del remitente.
 	\end{enumerate}
 
 \subsubsection{Problemas que resuelve}
 Esta pantalla ayuda a mitigar las causas que dan origen a los siguientes problemas:
 
 	\begin{itemize}
-		\item P
+		\item Es complicado consultar todos los oficios de un área de la cual una dependencia ha enviado al CMPL.
 	\end{itemize}
 
 \subsubsection{Pantallas relacionadas}
@@ -326,7 +347,7 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 \subsection{Pantalla de registro de dependencia que emite de oficios entrantes}
 \subsubsection{Descripción}
 %Descripción amplia de las funciones de la pantalla incluyendo la descripción de todos los botones y las validaciones con las que cuenta
-	En esta pantalla . La figura \ref{fig:NuevaDependencia} muestra el diseño de esta pantalla.		
+	En esta pantalla el usuario puede registrar el nombre de una dependencia que envió el oficio en caso de que aún no exista su registro dentro de la aplicación. La figura \ref{fig:NuevaDependencia} muestra el diseño de esta pantalla.		
 		
 	\begin{figure}[htbp!]
 		\centering
@@ -339,14 +360,18 @@ Está pantalla se relaciona con las siguientes figuras de pantallas:
 	Esta pantalla funciona de la siguiente manera:
 	
 	\begin{enumerate}
-		\item P
+		\item El usuario ingresa el nombre y el acrónimo de la dependencia que emite.
+		\item El usuario da clic en ``Registrar''.
+		\item La aplicación valida que todos los campos requeridos estén llenos.
+		\item La aplicación registra la información ingresada.
+		\item La aplicación vuelve a la pantalla de la figura \ref{fig:Wizard1DatosDelRemitente}, con el registro de la nueva dependencia.
 	\end{enumerate}
 
 \subsubsection{Problemas que resuelve}
 Esta pantalla ayuda a mitigar las causas que dan origen a los siguientes problemas:
 
 	\begin{itemize}
-		\item P
+		\item Es complicado consultar todos los oficios que una dependencia ha enviado al CMPL.
 	\end{itemize}
 
 \subsubsection{Pantallas relacionadas}
